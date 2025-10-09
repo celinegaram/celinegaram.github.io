@@ -1,0 +1,28 @@
+site_name: Your Name - Research & Analysis
+site_description: Personal website for bioinformatics research and projects
+site_author: Your Name
+site_url: https://yourusername.github.io
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Projects: projects.md
+  - Publications: publications.md
+  - Contact: contact.md
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - toc:
+      permalink: true
