@@ -26,6 +26,24 @@
   .btn-light:hover{background:#fff !important}
   .community-link{transition:color 0.15s, border-color 0.15s}
   .community-link:hover{color:#0a5e63 !important;border-color:#0a5e63 !important}
+  @media (max-width:767px){
+    .nav-inner{padding:0 16px !important;gap:8px !important;height:60px !important;}
+    .nav-links{gap:14px !important;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+    .nav-links::-webkit-scrollbar{display:none;}
+    .nav-links a{font-size:13.5px !important;}
+    .hero-grid{grid-template-columns:1fr !important;padding:40px 20px 36px !important;gap:32px !important;}
+    .story-section{padding:56px 20px 48px !important;}
+    .story-cols{grid-template-columns:1fr !important;gap:36px !important;}
+    .career-section{padding:56px 20px 48px !important;}
+    .career-grid{grid-template-columns:1fr 1fr !important;gap:28px 12px !important;}
+    .career-line{display:none !important;}
+    .community-grid{grid-template-columns:1fr !important;gap:28px !important;padding-left:20px !important;padding-right:20px !important;}
+    .pillars-inner{padding:44px 20px !important;}
+    .pullquote-inner{padding:56px 20px !important;}
+    .closing-inner{padding:64px 20px !important;}
+    .footer-inner{padding:40px 20px !important;}
+    .footer-bottom-inner{padding:16px 20px !important;}
+  }
 </style>
 </head>
 <body>
@@ -34,9 +52,9 @@
 
   <!-- NAV -->
   <header style="position:sticky;top:0;z-index:50;background:rgba(250,249,245,0.92);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e6e3da;">
-    <nav style="max-width:1160px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <nav class="nav-inner" style="max-width:1160px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
       <a href="index.html" style="font-family:'Newsreader',serif;font-size:22px;font-weight:500;letter-spacing:-0.01em;text-decoration:none;color:#1b201e;white-space:nowrap;">Celine G. Han</a>
-      <div style="display:flex;align-items:center;gap:30px;white-space:nowrap;">
+      <div class="nav-links" style="display:flex;align-items:center;gap:30px;white-space:nowrap;">
         <a href="index.html" style="font-size:15px;font-weight:600;text-decoration:none;color:#0d7d7d;">About</a>
         <a href="science-cv.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">Science &amp; CV</a>
         <a href="writing.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">Writing</a>
@@ -49,7 +67,7 @@
   <main style="flex:1;">
 
     <!-- HERO -->
-    <section style="max-width:1160px;margin:0 auto;padding:84px 32px 72px;display:grid;grid-template-columns:1.45fr 1fr;gap:64px;align-items:center;">
+    <section class="hero-grid" style="max-width:1160px;margin:0 auto;padding:84px 32px 72px;display:grid;grid-template-columns:1.45fr 1fr;gap:64px;align-items:center;">
       <div>
         <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-bottom:30px;">Translational data science · AI &amp; data strategy · Clinical development</p>
         <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(33px,4.4vw,55px);line-height:1.12;letter-spacing:-0.015em;color:#13201d;margin-bottom:24px;">I've been the scientist at the lab bench, at the business development table, and in the room where the AI roadmap gets decided.</h1>
@@ -73,7 +91,7 @@
 
     <!-- FOUR PILLARS -->
     <section style="border-top:1px solid #e6e3da;border-bottom:1px solid #e6e3da;background:#fcfbf8;">
-      <div style="max-width:1160px;margin:0 auto;padding:64px 32px;">
+      <div class="pillars-inner" style="max-width:1160px;margin:0 auto;padding:64px 32px;">
         <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#9a958a;margin-bottom:38px;">Four parallel pillars — not a pivot, an accumulation</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px;">
           <div>
@@ -101,8 +119,8 @@
     </section>
 
     <!-- THE ARC / NARRATIVE -->
-    <section id="story" style="max-width:1160px;margin:0 auto;padding:96px 32px 80px;">
-      <div style="display:grid;grid-template-columns:0.8fr 1.6fr;gap:64px;">
+    <section id="story" class="story-section" style="max-width:1160px;margin:0 auto;padding:96px 32px 80px;">
+      <div class="story-cols" style="display:grid;grid-template-columns:0.8fr 1.6fr;gap:64px;">
         <div>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-bottom:16px;">The story</p>
           <h2 style="font-family:'Newsreader',serif;font-size:clamp(28px,3.2vw,40px);font-weight:400;line-height:1.16;letter-spacing:-0.01em;color:#13201d;">A loop with a fork — and a thread that never broke.</h2>
@@ -126,20 +144,20 @@
 
     <!-- PRIMARY PULLQUOTE -->
     <section style="background:#eef3f1;border-top:1px solid #dfe7e3;border-bottom:1px solid #dfe7e3;">
-      <div style="max-width:980px;margin:0 auto;padding:90px 32px;text-align:center;">
+      <div class="pullquote-inner" style="max-width:980px;margin:0 auto;padding:90px 32px;text-align:center;">
         <p style="font-family:'Newsreader',serif;font-size:clamp(24px,3.2vw,38px);font-weight:400;line-height:1.35;letter-spacing:-0.01em;color:#13201d;">"An organization is not your title, and your title is not you. What travels with you is what you have built, who you have helped, and how you have made people feel in every room you have walked into."</p>
         <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-top:32px;">Celine G. Han</p>
       </div>
     </section>
 
     <!-- CAREER ARC -->
-    <section style="max-width:1160px;margin:0 auto;padding:90px 32px 80px;">
+    <section class="career-section" style="max-width:1160px;margin:0 auto;padding:90px 32px 80px;">
       <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-bottom:14px;">The arc, in motion</p>
       <h2 style="font-family:'Newsreader',serif;font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.2;color:#13201d;max-width:24ch;margin-bottom:14px;">The range isn't a detour. It's the credential.</h2>
       <p style="font-size:16px;color:#5c6562;line-height:1.65;max-width:62ch;margin-bottom:48px;">I left pharma to sit at the business development table, came back understanding both sides, and now combine clinical trial science with AI and data strategy in one role.</p>
 
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;">
-        <div style="position:absolute;top:7px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,#cfe0db,#0d7d7d);"></div>
+      <div class="career-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;">
+        <div class="career-line" style="position:absolute;top:7px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,#cfe0db,#0d7d7d);"></div>
         <div style="position:relative;padding-right:18px;">
           <div style="width:15px;height:15px;border-radius:50%;background:#cfe0db;border:2px solid #faf9f5;box-shadow:0 0 0 1px #cfe0db;margin-bottom:22px;"></div>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#9a958a;margin-bottom:8px;">FOUNDATION</p>
@@ -175,7 +193,7 @@
 
     <!-- COMMUNITY TEASER -->
     <section style="border-top:1px solid #e6e3da;background:#fcfbf8;">
-      <div style="max-width:1160px;margin:0 auto;padding:72px 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+      <div class="community-grid" style="max-width:1160px;margin:0 auto;padding:72px 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
         <div>
           <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-bottom:16px;">Community</p>
           <h2 style="font-family:'Newsreader',serif;font-size:clamp(26px,3vw,34px);font-weight:400;line-height:1.2;color:#13201d;margin-bottom:18px;">I founded and lead the Bioinformatics &amp; AI XChange.</h2>
@@ -197,7 +215,7 @@
 
     <!-- CLOSING INVITATION -->
     <section style="background:#083f43;color:#eaf2ef;">
-      <div style="max-width:980px;margin:0 auto;padding:96px 32px;text-align:center;">
+      <div class="closing-inner" style="max-width:980px;margin:0 auto;padding:96px 32px;text-align:center;">
         <p style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6fb3ab;margin-bottom:24px;">Let's talk</p>
         <h2 style="font-family:'Newsreader',serif;font-size:clamp(30px,4vw,52px);font-weight:400;line-height:1.12;letter-spacing:-0.01em;margin-bottom:28px;">I would love to hear from you.</h2>
         <p style="font-size:17px;line-height:1.7;color:#bcd4ce;max-width:48ch;margin:0 auto 38px;">Whether you're building AI strategy in clinical development, looking for a speaker, or just want to compare notes — the door is open.</p>
@@ -212,7 +230,7 @@
 
   <!-- FOOTER -->
   <footer style="background:#faf9f5;border-top:1px solid #e6e3da;">
-    <div style="max-width:1160px;margin:0 auto;padding:48px 32px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
+    <div class="footer-inner" style="max-width:1160px;margin:0 auto;padding:48px 32px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
       <div style="max-width:30ch;">
         <p style="font-family:'Newsreader',serif;font-size:20px;font-weight:500;color:#13201d;margin-bottom:8px;">Celine G. Han</p>
         <p style="font-size:13.5px;color:#5c6562;line-height:1.6;">Translational data scientist &amp; AI strategist in oncology clinical development.</p>
@@ -234,7 +252,7 @@
       </div>
     </div>
     <div style="border-top:1px solid #e6e3da;">
-      <div style="max-width:1160px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;">
+      <div class="footer-bottom-inner" style="max-width:1160px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;">
         <p style="font-size:12.5px;color:#9a958a;">© 2026 Celine G. Han</p>
         <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9a958a;">Built to be both excellent and portable.</p>
       </div>
