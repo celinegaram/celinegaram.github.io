@@ -22,6 +22,11 @@
   .btn-primary:hover{background:#0a5e63 !important}
   .btn-light{transition:background 0.15s}
   .btn-light:hover{background:#fff !important}
+  .talk-filter{font-family:'IBM Plex Mono',monospace;font-size:12.5px;background:#fff;border:1px solid #e6e3da;border-radius:999px;padding:7px 16px;cursor:pointer;color:#5c6562;transition:all 0.15s}
+  .talk-filter:hover{border-color:#0d7d7d;color:#0d7d7d}
+  .talk-filter.is-active{background:#0d7d7d;border-color:#0d7d7d;color:#fff}
+  .talk-tag{font-family:'IBM Plex Mono',monospace;font-size:11.5px;border-radius:999px;padding:4px 12px;white-space:nowrap}
+  @media(max-width:640px){.talk-row{grid-template-columns:70px 1fr !important;}.talk-tag{display:none !important;}}
 </style>
 </head>
 <body>
@@ -102,25 +107,168 @@
     <!-- SPEAKING HISTORY -->
     <section style="border-top:1px solid #e6e3da;background:#fcfbf8;">
       <div style="max-width:1160px;margin:0 auto;padding:76px 32px;">
-        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:36px;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:28px;">
           <h2 style="font-family:'Newsreader',serif;font-size:clamp(24px,2.6vw,32px);font-weight:400;color:#13201d;">Selected speaking</h2>
-          <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;">15+ talks &amp; presentations</p>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;">19 talks &amp; presentations</p>
         </div>
-        <div style="display:flex;flex-direction:column;">
-          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:baseline;padding:22px 0;border-top:1px dashed #d4d0c4;">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;">20XX</span>
-            <p style="font-size:16px;font-style:italic;font-family:'Newsreader',serif;color:#9a958a;">Talk title &amp; venue — add from your speaking history.</p>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b3afa4;">Conference</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;">
+          <button onclick="filterTalks('all')" class="talk-filter is-active" data-filter="all">All</button>
+          <button onclick="filterTalks('ai')" class="talk-filter" data-filter="ai">AI &amp; Drug Development</button>
+          <button onclick="filterTalks('science')" class="talk-filter" data-filter="science">Genomics &amp; Clinical Science</button>
+          <button onclick="filterTalks('career')" class="talk-filter" data-filter="career">Careers &amp; Community</button>
+        </div>
+        <div id="talk-list">
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Jun 2026</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">What's new, and what still breaks, in external data-driven discovery?</p>
+              <p style="font-size:13px;color:#5c6562;">Panelist · DataDrivenPharma East</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
           </div>
-          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:baseline;padding:22px 0;border-top:1px dashed #d4d0c4;">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;">20XX</span>
-            <p style="font-size:16px;font-style:italic;font-family:'Newsreader',serif;color:#9a958a;">Talk title &amp; venue — add from your speaking history.</p>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b3afa4;">Panel</span>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Feb 2026</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Two Sides of AI/ML in Drug Development: Building Methods and Translating to Impact</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · KASBP Dinner &amp; Learn <span style="color:#b3afa4;">(Joint talk with Eric Ma)</span></p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
           </div>
-          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:baseline;padding:22px 0;border-top:1px dashed #d4d0c4;border-bottom:1px dashed #d4d0c4;">
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;">20XX</span>
-            <p style="font-size:16px;font-style:italic;font-family:'Newsreader',serif;color:#9a958a;">Talk title &amp; venue — add from your speaking history.</p>
-            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#b3afa4;">Webinar</span>
+          <div data-theme="science" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Jan 2024</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Let's Talk Comp Bio</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · Carnegie Mellon University CompBio</p>
+            </div>
+            <span class="talk-tag" style="color:#34403c;background:#e6eeeb;">Genomics</span>
+          </div>
+          <div data-theme="career" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Sep 2023</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Empowering Collaborations: Bridging Life Sciences &amp; Tech Experts</p>
+              <p style="font-size:13px;color:#5c6562;">Panelist · Informatics Summit</p>
+            </div>
+            <span class="talk-tag" style="color:#6b5c34;background:#f3eddf;">Careers</span>
+          </div>
+          <div data-theme="career" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Apr 2023</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">R&amp;D Discovery Career Possibilities</p>
+              <p style="font-size:13px;color:#5c6562;">Panelist · WEST</p>
+            </div>
+            <span class="talk-tag" style="color:#6b5c34;background:#f3eddf;">Careers</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Sep 2022</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Tri-Omics Summit</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Dec 2021</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">IEEE UEMCON</p>
+              <p style="font-size:13px;color:#5c6562;">Keynote Speaker</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Nov 2021</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Machine Learning for Oncology Biomarker Discovery</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · BioData World Congress</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Sep 2021</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Quality Data for AI in Drug Development</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · Bio-IT World</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="science" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Jun 2021</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Poster Presentation</p>
+              <p style="font-size:13px;color:#5c6562;">Presenter · EACR</p>
+            </div>
+            <span class="talk-tag" style="color:#34403c;background:#e6eeeb;">Genomics</span>
+          </div>
+          <div data-theme="career" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Mar 2021</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Women Engineers Code (WECode)</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · Harvard University</p>
+            </div>
+            <span class="talk-tag" style="color:#6b5c34;background:#f3eddf;">Careers</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Dec 2020</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">DIGI-TECH Pharma &amp; AI</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Oct 2020</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Translational Bioinformatics for Biomarker Discovery</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · D4 Global</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="ai" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Oct 2019</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Integrating Clinical Trial and RWD for Drug Development</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · D4 Global, Cambridge MA</p>
+            </div>
+            <span class="talk-tag" style="color:#0d7d7d;background:#eef3f1;">AI &amp; Drug Dev</span>
+          </div>
+          <div data-theme="career" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">May 2019</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Careers in Biomedical Data Science</p>
+              <p style="font-size:13px;color:#5c6562;">Panelist · NIH-NIEHS Biomedical Career Symposium, Durham NC</p>
+            </div>
+            <span class="talk-tag" style="color:#6b5c34;background:#f3eddf;">Careers</span>
+          </div>
+          <div data-theme="science" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Sep 2017</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Drivers and Resistance to Therapy via Molecular Profiling</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · UMass Medical School</p>
+            </div>
+            <span class="talk-tag" style="color:#34403c;background:#e6eeeb;">Genomics</span>
+          </div>
+          <div data-theme="science" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Jul 2016</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Precision Therapy in Advanced Prostate Cancer</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · SU2C-PCF Progress Review, Chicago IL</p>
+            </div>
+            <span class="talk-tag" style="color:#34403c;background:#e6eeeb;">Genomics</span>
+          </div>
+          <div data-theme="science" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">Jun 2016</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Genomic Profiling: Drivers, Targets, and Therapy Responses</p>
+              <p style="font-size:13px;color:#5c6562;">Speaker · Festival of Genomics, Boston MA</p>
+            </div>
+            <span class="talk-tag" style="color:#34403c;background:#e6eeeb;">Genomics</span>
+          </div>
+          <div data-theme="career" class="talk-row" style="display:grid;grid-template-columns:90px 1fr auto;gap:16px 24px;align-items:start;padding:22px 0;border-top:1px dashed #d4d0c4;border-bottom:1px dashed #d4d0c4;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9a958a;padding-top:2px;white-space:nowrap;">May 2012</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:4px;">Exploring DNA with Penn State</p>
+              <p style="font-size:13px;color:#5c6562;">Lecturer &amp; Workshop Coordinator · NHGRI Event for High School Students, Penn State</p>
+            </div>
+            <span class="talk-tag" style="color:#6b5c34;background:#f3eddf;">Careers</span>
           </div>
         </div>
       </div>
@@ -184,5 +332,15 @@
   </footer>
 
 </div>
+<script>
+function filterTalks(theme) {
+  document.querySelectorAll('.talk-row').forEach(function(r) {
+    r.style.display = (theme === 'all' || r.dataset.theme === theme) ? 'grid' : 'none';
+  });
+  document.querySelectorAll('.talk-filter').forEach(function(b) {
+    b.classList.toggle('is-active', b.dataset.filter === theme);
+  });
+}
+</script>
 </body>
 </html>
