@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — Celine G. Han</title>
+<meta name="description" content="Selected publications and presentations — peer-reviewed work spanning immuno-oncology, translational genomics, and precision medicine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#faf9f5;color:#1b201e;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+  ::selection{background:#0d7d7d;color:#faf9f5}
+  a{color:inherit}
+  nav a{transition:color 0.15s}
+  nav a:hover{color:#0d7d7d !important}
+  footer a{transition:color 0.15s}
+  footer a:hover{color:#0d7d7d !important}
+  .btn-light{transition:background 0.15s}
+  .btn-light:hover{background:#fff !important}
+  .scholar-link{transition:color 0.15s,border-color 0.15s}
+  .scholar-link:hover{color:#0a5e63 !important;border-color:#0a5e63 !important}
+  .pub-filter{font-family:'IBM Plex Mono',monospace;font-size:12.5px;background:#fff;border:1px solid #e6e3da;border-radius:999px;padding:7px 16px;cursor:pointer;color:#5c6562;transition:all 0.15s}
+  .pub-filter:hover{border-color:#0d7d7d;color:#0d7d7d}
+  .pub-filter.is-active{background:#0d7d7d;border-color:#0d7d7d;color:#fff}
+</style>
+</head>
+<body>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;">
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(250,249,245,0.92);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e6e3da;">
+    <nav style="max-width:1160px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="index.html" style="font-family:'Newsreader',serif;font-size:22px;font-weight:500;letter-spacing:-0.01em;text-decoration:none;color:#1b201e;white-space:nowrap;">Celine G. Han</a>
+      <div style="display:flex;align-items:center;gap:30px;white-space:nowrap;">
+        <a href="about.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">About</a>
+        <a href="publications.html" style="font-size:15px;font-weight:600;text-decoration:none;color:#0d7d7d;">Publications</a>
+        <a href="blog.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">Blog</a>
+        <a href="talks.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">Talks</a>
+        <a href="community.html" style="font-size:15px;font-weight:500;text-decoration:none;color:#5c6562;">Community</a>
+      </div>
+    </nav>
+  </header>
+
+  <main style="flex:1;">
+
+    <!-- PAGE HEADER -->
+    <section style="max-width:1160px;margin:0 auto;padding:84px 32px 56px;">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:#0d7d7d;margin-bottom:22px;">Publications</p>
+      <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.12;letter-spacing:-0.015em;color:#13201d;max-width:18ch;margin-bottom:24px;">The scientific record behind the strategy.</h1>
+      <p style="font-size:17.5px;line-height:1.7;color:#34403c;max-width:60ch;">A career spent making complex data legible — across the bench, the clinic, the partnership table, and the AI roadmap. Peer-reviewed work and selected presentations in oncology, translational genomics, and AI in clinical development.</p>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section style="border-top:1px solid #e6e3da;background:#fcfbf8;">
+      <div style="max-width:1160px;margin:0 auto;padding:80px 32px;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:14px;">
+          <h2 style="font-family:'Newsreader',serif;font-size:clamp(24px,2.6vw,32px);font-weight:400;color:#13201d;">Selected publications</h2>
+          <a href="https://orcid.org/0000-0003-2004-8186" target="_blank" rel="noopener" class="scholar-link" style="font-size:14.5px;font-weight:600;color:#0d7d7d;text-decoration:none;border-bottom:1.5px solid #0d7d7d;padding-bottom:2px;">Full list on ORCID →</a>
+        </div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9a958a;margin-bottom:24px;">★ denotes first or corresponding authorship</p>
+
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;">
+          <button onclick="filterPubs('all')" class="pub-filter is-active" data-filter="all">All</button>
+          <button onclick="filterPubs('io')" class="pub-filter" data-filter="io">Immuno-Oncology</button>
+          <button onclick="filterPubs('resistance')" class="pub-filter" data-filter="resistance">Treatment Resistance</button>
+          <button onclick="filterPubs('genomics')" class="pub-filter" data-filter="genomics">Genomics &amp; Inherited Risk</button>
+        </div>
+
+        <div id="pub-list">
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[01]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Biomarker analysis from CheckMate 214: nivolumab plus ipilimumab versus sunitinib in renal cell carcinoma</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Motzer RJ, Choueiri TK, ..., <strong style="color:#13201d;font-weight:600;">Celine Han</strong>, ..., Wind-Rotolo M</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Journal for ImmunoTherapy of Cancer (JITC) · 2022</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[02]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">ECM biomarkers are elevated in advanced renal cell carcinoma and predictive of response to nivolumab plus ipilimumab: CheckMate 214</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Gupta S, <strong style="color:#13201d;font-weight:600;">Celine Han</strong>, Dwivedi B, ..., Willumsen NNW</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">SITC · 2022 · Conference</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[03]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Characterization of the immune landscape of primary vs metastatic breast cancer in a real-world data cohort</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Chhibber A, Van Naarden Braun K, <strong style="color:#13201d;font-weight:600;">Han C</strong>, Chang H, Roberts M, Li B</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">SABCS · 2021 · Conference</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[04]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#0d7d7d;background:#eef3f1;border-radius:4px;padding:2px 8px;margin-right:8px;vertical-align:middle;display:inline-block;">★ corresponding</span>Gene expression and immune contexture of breast cancer subtypes in molecular real-world data</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Wang X, Walsh A, Chhibber A, ..., <strong style="color:#13201d;font-weight:600;">Celine Han</strong> (corresponding &amp; presenting author)</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">EACR · 2021 · Conference</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[05]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Nivolumab plus ipilimumab for metastatic castration-resistant prostate cancer: CheckMate 650</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Sharma P, Pachynski RK, ..., <strong style="color:#13201d;font-weight:600;">G. Celine Han</strong>, ..., Fizazi K</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Cancer Cell · 2020</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[06]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Nivolumab in patients with advanced platinum-resistant urothelial carcinoma: extended follow-up from CheckMate 275</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Galsky M, Saci A, ..., <strong style="color:#13201d;font-weight:600;">G. Celine Han</strong>, ..., Sharma P</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Clinical Cancer Research · 2020</p>
+            </div>
+          </div>
+
+          <div data-theme="io" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[07]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#0d7d7d;background:#eef3f1;border-radius:4px;padding:2px 8px;margin-right:8px;vertical-align:middle;display:inline-block;">★ first author</span>Mutational signatures as biomarkers of response to nivolumab in metastatic bladder cancer (CheckMate 275)</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;"><strong style="color:#13201d;font-weight:600;">G. Celine Han</strong>, Szabo PM, Saci A, Walsh AM, ..., Sharma P</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">AACR · 2019 · Conference</p>
+            </div>
+          </div>
+
+          <div data-theme="resistance" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[08]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">CREB5 promotes resistance to androgen-receptor antagonists and androgen deprivation in prostate cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Hwang J, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Hahn WC</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Cell Reports · 2019</p>
+            </div>
+          </div>
+
+          <div data-theme="genomics" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[09]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">The long tail of oncogenic drivers in prostate cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Armenia J, Wankowicz SAM, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Van Allen EM; PCF/SU2C International Prostate Cancer Dream Team</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Nature Genetics · 2018</p>
+            </div>
+          </div>
+
+          <div data-theme="resistance" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[10]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Convergent therapeutic strategies to overcome the heterogeneity of acquired resistance in BRAF<sup>V600E</sup> colorectal cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Hazar-Rethinam M, Kleyman M, <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Corcoran RB</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Cancer Discovery · 2018</p>
+            </div>
+          </div>
+
+          <div data-theme="genomics" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[11]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Inherited DNA-repair defects in colorectal cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">AlDubayan SH, Giannakis M, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Van Allen EM</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">American Journal of Human Genetics · 2018</p>
+            </div>
+          </div>
+
+          <div data-theme="resistance" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[12]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#0d7d7d;background:#eef3f1;border-radius:4px;padding:2px 8px;margin-right:8px;vertical-align:middle;display:inline-block;">★ first author</span>Genomic resistance patterns to second-generation androgen blockade in paired tumor biopsies of metastatic castration-resistant prostate cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;"><strong style="color:#13201d;font-weight:600;">Han GC</strong>, Hwang J, Wankowicz SA, ..., Van Allen EM</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">JCO Precision Oncology · 2017</p>
+            </div>
+          </div>
+
+          <div data-theme="resistance" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[13]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Mutational patterns in chemotherapy resistant muscle-invasive bladder cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Liu D, Abbosh P, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Van Allen EM</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Nature Communications · 2017</p>
+            </div>
+          </div>
+
+          <div data-theme="resistance" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[14]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Genomic evolution and chemoresistance in germ-cell tumours</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Taylor-Weiner A, Zack T, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., Van Allen EM</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Nature · 2016</p>
+            </div>
+          </div>
+
+          <div data-theme="genomics" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[15]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;">Inherited DNA-repair gene mutations in men with metastatic prostate cancer</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;">Pritchard CC, Mateo J, Walsh MF, ..., <strong style="color:#13201d;font-weight:600;">Han GC</strong>, ..., de Bono J, Nelson PS</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">New England Journal of Medicine · 2016</p>
+            </div>
+          </div>
+
+          <div data-theme="genomics" class="pub-row" style="padding:14px 0;border-top:1px dashed #d4d0c4;border-bottom:1px dashed #d4d0c4;display:grid;grid-template-columns:36px 1fr;gap:20px;align-items:start;">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#0d7d7d;padding-top:1px;">[16]</span>
+            <div>
+              <p style="font-size:15.5px;font-family:'Newsreader',serif;color:#13201d;line-height:1.4;margin-bottom:7px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#0d7d7d;background:#eef3f1;border-radius:4px;padding:2px 8px;margin-right:8px;vertical-align:middle;display:inline-block;">★ first author</span>Genome-wide organization of GATA1 and TAL1 determined at high resolution</p>
+              <p style="font-size:13px;color:#5c6562;line-height:1.5;margin-bottom:5px;"><strong style="color:#13201d;font-weight:600;">Han GC</strong>, Vinayachandran V, Bataille AR, ..., Pugh BF</p>
+              <p style="font-size:12px;color:#9a958a;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em;margin-bottom:0;">Molecular and Cellular Biology · 2015</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#faf9f5;border-top:1px solid #e6e3da;">
+    <div style="max-width:1160px;margin:0 auto;padding:48px 32px;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;">
+      <div style="max-width:30ch;">
+        <p style="font-family:'Newsreader',serif;font-size:20px;font-weight:500;color:#13201d;margin-bottom:8px;">Celine G. Han</p>
+        <p style="font-size:13.5px;color:#5c6562;line-height:1.6;">Translational data scientist &amp; AI strategist in oncology clinical development.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#9a958a;margin-bottom:4px;">Site</p>
+          <a href="about.html" style="font-size:14px;color:#5c6562;text-decoration:none;">About</a>
+          <a href="publications.html" style="font-size:14px;color:#5c6562;text-decoration:none;">Publications</a>
+          <a href="blog.html" style="font-size:14px;color:#5c6562;text-decoration:none;">Blog</a>
+          <a href="talks.html" style="font-size:14px;color:#5c6562;text-decoration:none;">Talks</a>
+          <a href="community.html" style="font-size:14px;color:#5c6562;text-decoration:none;">Community</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:#9a958a;margin-bottom:4px;">Elsewhere</p>
+          <a href="https://www.linkedin.com/in/celinehan/" target="_blank" rel="noopener" style="font-size:14px;color:#5c6562;text-decoration:none;">LinkedIn</a>
+          <a href="mailto:celinegaram@gmail.com" style="font-size:14px;color:#5c6562;text-decoration:none;">Email</a>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #e6e3da;">
+      <div style="max-width:1160px;margin:0 auto;padding:20px 32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;">
+        <p style="font-size:12.5px;color:#9a958a;">© 2026 Celine G. Han</p>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9a958a;">Built to be both excellent and portable.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+function filterPubs(theme) {
+  document.querySelectorAll('.pub-row').forEach(function(r) {
+    r.style.display = (theme === 'all' || r.dataset.theme === theme) ? 'grid' : 'none';
+  });
+  document.querySelectorAll('.pub-filter').forEach(function(b) {
+    b.classList.toggle('is-active', b.dataset.filter === theme);
+  });
+}
+</script>
+</body>
+</html>
